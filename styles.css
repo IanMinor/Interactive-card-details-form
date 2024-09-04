@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --red: #ff5252;
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: #dedddf;
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+body {
+    font-size: 18px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.main-container {
+    width: 375px;
+    margin: auto;
+}
+
+.main-container__background-section {
+    background-image: url(images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    height: 240px;
+    position: relative;
+}
+
+.main-container__form-section {
+    padding: 90px 24px 45px;
+}
+
+.card {
+    width: 288px;
+    height: 160px;
+    color: var(--white);
+    padding: 20px;
+    background-image: url(./images/bg-card-front.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 126px;
+    left: 18px;
+    z-index: 1;
+}
+
+.card__logo {
+    width: 55px;
+    margin-bottom: 30px;
+}
+
+.card__number {
+    margin-bottom: 15px;
+}
+
+.card__details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.6em;
+    text-transform: uppercase;
+}
+
+.card-back {
+    background-image: url(./images/bg-card-back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 288px;
+    height: 160px;
+    color: var(--white);
+    padding: 20px;
+    position: absolute;
+    top: 30px;
+    left: 75px;
+    letter-spacing: 2px;
+}
+
+.card-back__cvc {
+    font-size: 0.7em;
+    margin-top: 50px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+.form__label {
+    text-transform: uppercase;
+    font-size: 0.65em;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 8px;
+    color: var(--very-dark-violet);
+    font-weight: bold;
+}
+
+.form__input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    font-family: inherit;
+    border: 1px solid var(--light-grayish-violet);
+    padding-left: 10px;
+    font-size: 1em;
+    outline: none;
+}
+
+.form__input::placeholder {
+    color: var(--light-grayish-violet);
+}
+
+.form__date-cvc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 16px;
+}
+
+.form__date {
+    display: flex;
+    gap: 10px;
+}
+
+.form__submit,
+.thanks-section__button {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+.form__submit:hover {
+    cursor: pointer;
+}
+
+.error {
+    /* display: none; */
+    color: var(--red);
+    margin: -10px 0 18px;
+    font-size: 0.6em;
+}
+
+.form__errors-container {
+    display: flex;
+    gap: 5px;
+}
+
+.form__errors-container div {
+    width: 100px;
+    text-align: center;
+}
+
+.thanks-section {
+    display: none;
+    width: 375px;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.thanks-section__img {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.thanks-section__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: var(--very-dark-violet);
+    margin-bottom: 24px;
+}
+
+.thanks-section__text {
+    text-align: center;
+    color: var(--dark-grayish-violet);
+    font-size: 1.1em;
+    margin-bottom: 24px;
+}
+
+@media (min-width:1440px) {
+    .main-container {
+        width: 1440px;
+        display: flex;
+    }
+
+    .main-container__background-section {
+        background-image: url(./images/bg-main-desktop.png);
+        width: 900px;
+        height: 900px;
+        background-repeat: no-repeat;
+    }
+
+    .card {
+        width: 450px;
+        height: 247px;
+        padding: 30px;
+        top: 187px;
+        left: 167px;
+    }
+
+    .card__logo {
+        width: 86px;
+        margin-bottom: 55px;
+    }
+
+    .card__number {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+
+    .card__details {
+        font-size: 0.8em;
+    }
+
+    .card-back {
+        width: 450px;
+        height: 247px;
+        padding: 30px;
+        font-size: 1em;
+        margin-top: 80px;
+        padding-right: 30px;
+        top: 400px;
+        left: 257px;
+    }
+
+    .form {
+        margin-top: 180px;
+        width: 385px;
+    }
+
+    .form__input {
+        margin-bottom: 40px;
+    }
+
+    .thanks-section {
+        margin-top: 180px;
+    }
+}
